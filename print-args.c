@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <string.h>
-#include <getopt.h>
 
 void print_usage(char **argv) {
 	printf(
