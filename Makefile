@@ -3,15 +3,16 @@ CC = gcc
 CFLAGS = -Wall -Wextra -std=c11
 
 # Target executable name
-TARGET = args
+TARGET = bin/print-args
 
 # Source files
-SRC = main.c
+SRC = print-args.c
 
 # Build rules
 all: $(TARGET)
 
 $(TARGET): $(SRC)
+	@mkdir -p bin
 	$(CC) $(CFLAGS) -o $(TARGET) $(SRC)
 
 # Clean up build artefacts

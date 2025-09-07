@@ -59,11 +59,11 @@ Options:
 
 ## Building
 
-Compile with `cc`:
+Compile with `make`:
 
 ```
 
-cc print-args.c -o print-args
+make build
 
 ```
 
@@ -71,6 +71,7 @@ Run the program:
 
 ```
 
+cd bin/
 ./print-args hello world
 
 ```

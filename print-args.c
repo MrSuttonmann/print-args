@@ -16,7 +16,7 @@ void print_args(int argc, char **argv) {
 }
 
 int main(int argc, char **argv) {
-	if (argc > 1 && strcmp(argv[1], "--help") == 0 || strcmp(argv[1], "-h") == 0) {
+	if (argc > 1 && (strcmp(argv[1], "--help") == 0 || strcmp(argv[1], "-h") == 0)) {
 		print_usage(argv);
 		return 0;
 	}
