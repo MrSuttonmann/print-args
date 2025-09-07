@@ -15,6 +15,19 @@ $(TARGET): $(SRC)
 	@mkdir -p bin
 	$(CC) $(CFLAGS) -o $(TARGET) $(SRC)
 
+# Install executable to /usr/local/bin
+install: $(TARGET)
+	@echo "Installing $(TARGET) to /usr/local/bin..."
+	sudo cp $(TARGET) /usr/local/bin/
+	sudo chmod +x /usr/local/bin/$(notdir $(TARGET))
+	@echo "Installation complete."
+
+# Uninstall executable from /usr/local/bin
+uninstall:
+	@echo "Removing /usr/local/bin/$(notdir $(TARGET))..."
+	sudo rm -f /usr/local/bin/$(notdir $(TARGET))
+	@echo "Uninstallation complete."
+
 # Clean up build artefacts
 clean:
 	rm -f $(TARGET)
