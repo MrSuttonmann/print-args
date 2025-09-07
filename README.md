@@ -11,7 +11,7 @@ A simple C program that demonstrates how to parse and display command line argum
 
 ```
 
-./print-args \[OPTIONS] \[INPUT]
+./print-args [OPTIONS] [INPUT]
 
 ```
 
@@ -50,7 +50,7 @@ arg3: baz
 Output:
 ```
 
-Usage: ./print-args \[OPTIONS] \[INPUT]
+Usage: ./print-args [OPTIONS] [INPUT]
 
 Options:
 -h, --help    Show this help message and exit
