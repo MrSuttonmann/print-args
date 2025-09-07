@@ -1,25 +1,28 @@
 #include <stdio.h>
 #include <string.h>
+#include <getopt.h>
 
-void printHelp() {
-	printf("A utility to print a list of arguments passed to the program.\n");
+void print_usage(char **argv) {
+	printf(
+		"Usage: %s [OPTIONS] [INPUT]\n\n"
+		"Options:\n"
+		"    -h, --help    Show this help message and exit"
+		"\n", argv[0]);
 }
 
-void printArgs(int argc, char **argv) {
+void print_args(int argc, char **argv) {
 	for(int i = 0; i < argc; i++) {
 		printf("arg%d: %s\n", i, argv[i]);
 	}
 }
 
 int main(int argc, char **argv) {
-	for(int i = 0; i < argc; i++) {
-	    if (strcmp(argv[i], "--help") == 0 || strcmp(argv[i], "-h") == 0) {
-              printHelp();
-              return 0;
-            }
+	if (argc > 1 && strcmp(argv[1], "--help") == 0 || strcmp(argv[1], "-h") == 0) {
+		print_usage(argv);
+		return 0;
 	}
 
-        printArgs(argc, argv);
+    print_args(argc, argv);
 	return 0;
 }
 
