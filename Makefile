@@ -9,7 +9,7 @@ TARGET = bin/print-args
 SRC = print-args.c
 
 # Build rules
-all: $(TARGET)
+build: $(TARGET)
 
 $(TARGET): $(SRC)
 	@mkdir -p bin
